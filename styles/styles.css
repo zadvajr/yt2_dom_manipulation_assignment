@@ -1,0 +1,33 @@
+/* Universal Selector to reset default settings on the pages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+/* main section styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Media Query for screens larger than 1440px */
+@media (min-width: 1440px) {
+  main {
+    max-width: 1440px;
+    min-height: 1024px;
+  }
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
