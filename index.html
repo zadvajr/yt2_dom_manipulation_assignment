@@ -3,16 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <script src="./scripts/index.js" defer></script>
-    <title>JS DOM Manipulation Assignment by Daniel Zadva Jnr</title>
+    <link rel="icon" href="./icons/logo.svg" type="image/x-icon" />
+    <title>Aerten | Employees</title>
   </head>
   <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="./icons/logo.svg" alt="Brand Logo" />
+        <h3>Aerten</h3>
+      </div>
+      <div class="home">
+        <img src="./icons/home.svg" alt="Home Icon" />
+        <span>Dashboard</span>
+      </div>
+      <div class="roles">
+        <img src="./icons/roles.svg" alt="Roles Icon" />
+        <span>Roles</span>
+      </div>
+      <div class="employees">
+        <button>
+          <img src="./icons/users.svg" alt="Users Icons" />
+          <span>Employees</span>
+          <img src="./icons/arrow-down.svg" alt="Down Arrow" />
+        </button>
+        <div class="sub-menu">
+          <div class="all">
+            <img src="./icons/dot-active.svg" alt="all active employees icon" />
+            <span>All Employees</span>
+          </div>
+          <div class="new">
+            <img src="./icons/dot-gray.svg" alt="new employee icon" />
+            <span>Reent hires</span>
+          </div>
+        </div>
+      </div>
+      <div class="payroll">
+        <img src="./icons/payroll.svg" alt="Payroll Icon" />
+        <span>Payroll</span>
+      </div>
+      <div class="reports">
+        <img src="./icons/repots.svg" alt="Reports Icon" />
+        <span>Reports</span>
+      </div>
+      <div class="settings">
+        <img src="./icons/settings.svg" alt="Settings Icon" />
+        <span>Settings</span>
+      </div>
+    </aside>
+    <div class="searchbar">
+      <div class="search-input">
+        <img src="./icons/search.svg" alt="Search Icon" />
+        <input type="text" placeholder="Search anything here" />
+      </div>
+      <div>
+        <img src="./icons/settings.svg" alt="Settings Icon" />
+        <img src="./icons/notify.svg" alt="Notification Icon" />
+        <img src="./icons/user.svg" alt="User Icon" />
+      </div>
+    </div>
+    <div class="card-header">
+      <div class="card-item-left">
+        <h4>Employees</h4>
+        <img src="./icons/question.svg" alt="Question Icond" />
+        <span id="employee-count-output">100</span>
+      </div>
+      <div class="card-item-right">
+        <button>
+          <img src="./icons/export.svg" alt="Export Icon" />
+          <span>Export</span>
+        </button>
+        <button>
+          <img src="./icons/new-icon.svg" alt="New Employee Icon" />
+          <span>New Employee</span>
+        </button>
+      </div>
+    </div>
     <main>
-      <img src="./icons/logo.svg" alt="" />
-      <aside>
-        <h1>testing</h1>
-      </aside>
+      <div class="tabs">
+        <div class="tab-item active">
+          <span>All Employees</span>
+        </div>
+        <div class="tab-item">
+          <span>Teams</span>
+        </div>
+        <div class="tab-item">
+          <span>Roles</span>
+        </div>
+      </div>
+      <div class="search-and-filter">
+        <div class="search">
+          <img src="./icons/search.svg" alt="Search Icon" />
+          <input
+            type="text"
+            placeholder="Search Employee by name, role, ID or any related keywords"
+          />
+        </div>
+        <div class="filter">
+          <button>
+            <img src="./icons/filter-icon.svg" alt="Filter Icon" />
+            <span>Filter</span>
+          </button>
+          <button>
+            <img src="./icons/more-icon-2.svg" alt="Filter Icon" />
+          </button>
+          <button>
+            <img src="./icons/grid-filter.svg" alt="Grid Filter Icon" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Employees Data Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" />
+            </th>
+            <th>Name</th>
+            <th>Employee ID</th>
+            <th>
+              <span>Role</span>
+              <img src="./icons/question.svg" alt="Question Icon" />
+            </th>
+            <th>Status</th>
+            <th>Teams</th>
+          </tr>
+        </thead>
+        <tbody id="employee-table-body"></tbody>
+      </table>
+      <footer>
+        <div class="previous">
+          <img src="./icons/previous.svg" alt="Previous Icon" />
+          <span>Previous</span>
+        </div>
+        <div class="page-number">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>...</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+        </div>
+        <div class="next">
+          <span>Next</span>
+          <img src="./icons/next-arrow.svg" alt="Next Icon" />
+        </div>
+      </footer>
     </main>
   </body>
 </html>

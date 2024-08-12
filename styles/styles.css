@@ -6,6 +6,23 @@
   border: 1px solid red;
 }
 
+/* sidebar section */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 16%;
+  height: 100vh;
+
+  width: Fixed (231px) px;
+  height: Fixed (1, 024px) px;
+  padding: 32px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  background: #ffffff;
+  border: 1px solid #eff1f4;
+}
+
 /* main section styling */
 main {
   display: flex;
