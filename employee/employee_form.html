@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../scripts/index.js" defer></script>
+    <title>Add New Employee | Form</title>
+  </head>
+  <body>
+    <!-- Button to trigger the popover -->
+    <button id="newEmployeeButton">
+      <img src="./icons/new-icon.svg" alt="New Employee Icon" />
+      <span>New Employee</span>
+    </button>
+
+    <!-- Popover Form -->
+    <div id="popoverForm" class="popover-form">
+      <div class="popover-content">
+        <span class="close-btn">&times;</span>
+        <h3>New Employee Form</h3>
+        <form>
+          <label for="employeeName">Name:</label>
+          <input type="text" id="employeeName" name="employeeName" required />
+
+          <label for="employeeRole">Role:</label>
+          <input type="text" id="employeeRole" name="employeeRole" required />
+
+          <!-- Add other form fields as needed -->
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

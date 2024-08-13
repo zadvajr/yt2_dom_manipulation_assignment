@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popover Form Example</title>
+  <style>
+    /* Popover Form Styles */
+    .popover-form {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      border-radius: 8px;
+    }
+
+    .popover-content {
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Button Styles (Optional) */
+    #newEmployeeButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #newEmployeeButton img {
+      width: 20px;
+      height: 20px;
+    }
+
+    #newEmployeeButton span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button to trigger the popover -->
+  <button id="newEmployeeButton">
+    <img src="./icons/new-icon.svg" alt="New Employee Icon" />
+    <span>New Employee</span>
+  </button>
+
+  <!-- Popover Form -->
+  <div id="popoverForm" class="popover-form">
+    <div class="popover-content">
+      <span class="close-btn">&times;</span>
+      <h3>New Employee Form</h3>
+      <form>
+        <label for="employeeName">Name:</label>
+        <input type="text" id="employeeName" name="employeeName" required>
+        
+        <label for="employeeRole">Role:</label>
+        <input type="text" id="employeeRole" name="employeeRole" required>
+        
+        <!-- Add other form fields as needed -->
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Get the elements
+    const newEmployeeButton = document.getElementById('newEmployeeButton');
+    const popoverForm = document.getElementById('popoverForm');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Show the popover form when the button is clicked
+    newEmployeeButton.addEventListener('click', function() {
+      popoverForm.style.display = 'block';
+    });
+
+    // Hide the popover form when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+      popoverForm.style.display = 'none';
+    });
+
+    // Optional: Hide the popover form if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target == popoverForm) {
+        popoverForm.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
